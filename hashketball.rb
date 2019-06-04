@@ -141,6 +141,7 @@ def shoe_size(player_needed)
   end
 end 
 
+
 def team_colors(team_needed)
   game_hash.each do |team, value|
      if value[:team_name] == team_needed
@@ -178,6 +179,17 @@ def player_stats(players_name)
   end
 end
 
+# def game_hash
+#   hash = {
+#     :home => {
+#       :team_name => "Brooklyn Nets",
+#       :colors => ["Black", "White"], 
+#       :players => {
+#         "Alan Anderson" => { 
+#             :number => 0,
+#             :shoe => 16,
+
+
 def big_shoe_rebounds
   shoe_size = 0
   rebounds = 0
@@ -192,3 +204,43 @@ def big_shoe_rebounds
   rebounds
 end
 
+def most_points_scored
+  game_hash.each do |team, value|
+    value[:players].each do |info, value_2|
+     value_2.each do |att|
+       att[:points.to_s].each do |x|
+      binding.pry
+       end
+      end
+    end
+  end
+end
+
+
+# def game_hash
+#   hash = {
+#     :home => {
+#       :team_name => "Brooklyn Nets",
+#       :colors => ["Black", "White"], 
+#       :players => {
+#         "Alan Anderson" => { 
+#             :number => 0,
+#             :shoe => 16,
+#             :points => 22,
+#             :rebounds => 12,
+#             :assists => 12,
+#             :steals => 3,
+#             :blocks => 1,
+#             :slam_dunks => 1
+#         },
+#         "Reggie Evans" => { 
+#             :number => 30,
+#             :shoe => 14,
+#             :points => 12,
+#             :rebounds => 12,
+#             :assists => 12,
+#             :steals => 12,
+#             :blocks => 12,
+#             :slam_dunks => 7
+ 
+#if :player == matching player inside info, send the shoe size for that #player
